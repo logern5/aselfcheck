@@ -7,13 +7,17 @@ function prompt_item(){
 
 function get_item(item_num){
 	var x = new XMLHttpRequest();
-	x.onreadystatechange = function(){
-		if(x.readyState == 4){
-			alert(x.status);
-		}
-	}
+	x.onreadystatechange = update_receipt;
 	var params = "item_code=" + item_num;
 	x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 	x.open("POST","inventory.php",true);
 	x.send();
+}
+
+function update_receipt(x){
+	if(x.readyState == 4){
+		alert(x.status);
+	}
+
+
 }
