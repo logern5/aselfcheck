@@ -1,5 +1,4 @@
 <?php
-echo "test";
 $item = $_POST["item_code"];
 $handle = fopen("creds.txt","r");
 $user = rtrim(fgets($handle));
