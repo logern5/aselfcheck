@@ -14,7 +14,6 @@ $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_array();
 $num = $result->num_rows();
-$conn->close();
 if($rows != 1){
     die("Rows != 1);
 }
@@ -28,4 +27,5 @@ reg_date TIMESTAMP
 )
 */
 echo "success";
+$conn->close();
 ?>
