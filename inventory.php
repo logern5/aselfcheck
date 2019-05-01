@@ -18,14 +18,6 @@ if($rows != 1){
     die("Rows != 1);
 }
 echo $row["price"];
-/* TODO:
-CREATE TABLE products (
-id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(30) NOT NULL,
-price INT(6) NOT NULL,
-reg_date TIMESTAMP
-)
-*/
 echo "success";
 $conn->close();
 ?>
