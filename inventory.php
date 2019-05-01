@@ -13,7 +13,11 @@ $stmt->bind_param("i",$item);
 $stmt->execute();
 $result = $stmt->get_result();
 $row = $result->fetch_array();
+$num = $result->num_rows();
 $conn->close();
+if($rows != 1){
+    die("Rows != 1);
+}
 echo $row["price"];
 /* TODO:
 CREATE TABLE products (
