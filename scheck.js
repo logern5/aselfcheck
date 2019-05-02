@@ -16,5 +16,5 @@ function get_item(item_num){
 	x.open("POST","inventory.php",true);
 	x.onload = function(){update_receipt(this);};
 	x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-	x.send();
+	x.send(params);
 }
