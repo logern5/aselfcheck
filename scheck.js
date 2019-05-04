@@ -9,8 +9,23 @@ function prompt_item(){
 function update_receipt(x){
 	alert(x.status);
 	alert(x.responseText);
+	if(x.status != 200){
+		alert("Server error");
+		return;
+	}
+	if(x.responseText.includes("Error")){
+		alert("DB Error");
+		return;
+	}
+	var toks = x.responseText.split(";");
+	var name = toks[0];
+	var price = (toks[1] / 100).toFixed(2);
+	var textarea = document.getElementById("items");
+	textarea.value += name + "\t$" + price + "\n";
 }
+
 function get_item(item_num){
+	alert(item_num);
 	var x = new XMLHttpRequest();
 	var params = "item_code=" + item_num;
 	x.open("POST","inventory.php",true);
