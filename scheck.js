@@ -7,8 +7,8 @@ function prompt_item(){
 }
 
 function update_receipt(x){
-	alert(x.status);
-	alert(x.responseText);
+	//alert(x.status);
+	//alert(x.responseText);
 	if(x.status != 200){
 		alert("Server error");
 		return;
@@ -25,7 +25,7 @@ function update_receipt(x){
 }
 
 function get_item(item_num){
-	alert(item_num);
+	//alert(item_num);
 	var x = new XMLHttpRequest();
 	var params = "item_code=" + item_num;
 	x.open("POST","inventory.php",true);
