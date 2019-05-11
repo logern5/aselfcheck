@@ -24,8 +24,9 @@ function update_receipt(x){
 	var price = (toks[1] / 100).toFixed(2);
 	var textarea = document.getElementById("items");
 	textarea.value += name + "\t$" + price + "\n";
-	total += toks[1];
-	document.getElementById("total").value = (total / 100).toFixed(2);
+	total += toks[1] * 1;
+	//alert(total);
+	document.getElementById("total").innerHTML = (total / 100).toFixed(2);
 }
 
 function get_item(item_num){
