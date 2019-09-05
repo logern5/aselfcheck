@@ -1,15 +1,17 @@
 var total = 0;
 
 function prompt_item(){
+	/* Ask user for item code, and get information from it */
 	var item_num = prompt("Enter an item code");
 	if(item_num != null){
 		alert(item_num);
+		/* Send request to DB for price */
 		get_item(item_num);
 	}
 }
 
 function update_receipt(x){
-	// Update receipt textarea
+	/* Update receipt text area */
 	if(x.status != 200){
 		alert("Server error");
 		return;
@@ -30,6 +32,7 @@ function update_receipt(x){
 }
 
 function get_item(item_num){
+	/* Request DB for price of an item */
 	//alert(item_num);
 	var x = new XMLHttpRequest();
 	var params = "item_code=" + item_num;
