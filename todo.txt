@@ -3,3 +3,5 @@ VARCHAR(30) NOT NULL, price INT(6) NOT NULL, reg_date TIMESTAMP ) */
 /* Add 'total' variable in PHP, cookie system */
 /* Add transaction logging in SQL */
 /* Add form in checkout.html */
+/* Create thankyou.html */
+/* Add comments */
