@@ -9,8 +9,7 @@ function prompt_item(){
 }
 
 function update_receipt(x){
-	//alert(x.status);
-	//alert(x.responseText);
+	// Update receipt textarea
 	if(x.status != 200){
 		alert("Server error");
 		return;
@@ -25,6 +24,7 @@ function update_receipt(x){
 	var textarea = document.getElementById("items");
 	textarea.value += name + "\t$" + price + "\n";
 	total += toks[1] * 1;
+	document.cookie() = "total=" + total;
 	//alert(total);
 	document.getElementById("total").innerHTML = (total / 100).toFixed(2);
 }
