@@ -26,7 +26,7 @@ function update_receipt(x){
 	var textarea = document.getElementById("items");
 	textarea.value += name + "\t$" + price + "\n";
 	total += toks[1] * 1;
-	document.cookie() = "total=" + total;
+	document.cookie() = "total=" + (total / 100).toFixed(2);
 	//alert(total);
 	document.getElementById("total").innerHTML = (total / 100).toFixed(2);
 }
