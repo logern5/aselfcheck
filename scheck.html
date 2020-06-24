@@ -7,20 +7,93 @@
   <title>SelfCheck checkout</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <style>
-    button {
-      height: 100px;
-      width: 200px;
+    html, body{
+      height: 100%;
+    }
+
+    /* Numpad and buttons */
+    .btn {
+      width: 100%;
+    }
+    .num {
+      background-color: #add8e6;
+    }
+    .code-input {
+      width: 100%;
+    }
+    .abtn {
+      background-color: green;
+    }
+    #numpad-container{
+      table-layout: fixed;
+      width: 100%;
+      height: 60%;
+    }
+    .panel {
+      height: 100%;
+    }
+    .txt {
+      height: 50%;
+      width: 100%;
+    }
+    .panel-container {
+      height: 100%;
+    }
+
+    /* Purchases table */
+    #products-container {
+      height: 60%;
+      width: 100%;
+      overflow: scroll;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="w3-container">
-    <div class="w3-display-topleft">
-      <p>Total: <b id="total">0.00</b></p>
+<div class="panel-container w3-container w3-light-gray">
+  <div class="left-panel panel w3-container w3-threequarter">
+    </p>Items:</p>
+    <div id="products-container" class="w3-light-gray">
+      <table id="products-table" class="w3-table w3-bordered">
+      <thead>
+        <tr>
+          <td><b>Item description</b></td>
+          <td><b>Price</b></td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>    
+      </table>
     </div>
-    <textarea id="items" rows="10" cols="40" class="w3-display-left"></textarea>
-    <button id="add" class="w3-button w3-green w3-padding w3-display-bottomright" onclick="prompt_item()" >Add item</a>
-    <button class="w3-button w3-green w3-padding w3-display-right" >Check out</a>
   </div>
+  <div class="right-panel panel w3-container w3-quarter">
+    <p>Enter item code:</p>
+    <input type="text" class="code-input"></input>
+    <p></p>
+    <table id="numpad-container">
+      <tr>
+        <td><button class="w3-button num btn">1</button></td>
+        <td><button class="w3-button num btn">2</button></td>
+        <td><button class="w3-button num btn">3</button></td>
+      </tr>
+      <tr>
+        <td><button class="w3-button num btn">4</button></td>
+        <td><button class="w3-button num btn">5</button></td>
+        <td><button class="w3-button num btn">6</button></td>
+      </tr>
+      <tr>
+        <td><button class="w3-button num btn">7</button></td>
+        <td><button class="w3-button num btn">8</button></td>
+        <td><button class="w3-button num btn">9</button></td>
+      </tr>
+      <tr>
+        <td><button class="w3-button abtn btn">Clear</button></td>
+        <td><button class="w3-button num btn">0</button></td>
+        <td><button class="w3-button abtn btn">Enter</button></td>
+      </tr>
+    </table>
+    <button class="w3-button abtn btn">Finish and Pay</button>
+  </div>
+</div>
 </body>
 </html>
