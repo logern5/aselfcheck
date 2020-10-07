@@ -1,4 +1,5 @@
 <?php
+session_start();
 $item_code = $_POST["id"];
 
 /* Connect to DB and get price of item */
@@ -10,6 +11,11 @@ if ($conn -> connect_errno){
 $query = "SELECT product_price,product_name FROM products WHERE product_id = " . (string)((int)$item_code) . ";";
 $result = $conn->query($query);
 $assoc = $result->fetch_assoc();
+
+/* If item exists, add to internal list of purchased items */
+if(!empty($assoc)){
+	($_SESSION["items"])[] = $item_code;
+}
 
 echo json_encode($assoc);
 ?>
