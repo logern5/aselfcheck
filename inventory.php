@@ -1,4 +1,6 @@
 <?php
+//This file is likely useless
+
 //echo var_dump($_POST);
 $item = $_POST["item_code"];
 //$item = (int) 1; /*TODO: remove*/

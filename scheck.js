@@ -1,7 +1,7 @@
 var total = 0;
 var cart_items = [];
 
-function get_item_price(item_code){
+function add_item(item_code){
 	var x = new XMLHttpRequest();
 	x.onreadystatechange = function(){
 		if(this.readyState == 4){
@@ -42,8 +42,9 @@ function get_item_price(item_code){
 			}
 		}
 	}
-	x.open("GET","getprice.php?id=" + item_code,true);
-	x.send();
+	x.open("POST","add_item.php",true);
+	x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	x.send("id=" + item_code);
 }
 
 /* Code for numpad */
@@ -70,7 +71,13 @@ window.onload = function(){
 	enter.onclick = function(){
 		console.log("enter clicked");
 		var item_code = document.getElementById("codebox").value;
-		var item_data = get_item_price(item_code);
+		add_item(item_code);
 		document.getElementById("codebox").value = "";
+	}
+	/* Listen for finish/pay button */
+	var finish = document.getElementById("finish");
+	finish.onclick = function(){
+		console.log("finish clicked");
+		console.log(cart_items);
 	}
 }

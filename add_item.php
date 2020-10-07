@@ -1,5 +1,7 @@
 <?php
-$item_code = $_GET["id"];
+$item_code = $_POST["id"];
+
+/* Connect to DB and get price of item */
 $conn = new mysqli("127.0.0.1:3306", "root", "password", "aselfcheck");
 if ($conn -> connect_errno){
 	die("Could not connect to MySQL DB: " . $conn->connect_error);
