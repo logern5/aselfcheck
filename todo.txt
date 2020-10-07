@@ -1,19 +1,2 @@
-- `CREATE DATABASE ASELFCHECK`
--
-``` 
-CREATE TABLE products (
-product_id INT UNSIGNED PRIMARY KEY,
-product_name VARCHAR(30) NOT NULL, 
-price INT NOT NULL
-)
-```
--
-```
-CREATE TABLE transactions (
-transaction_id UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-product_id INT UNSIGNED,
-card_number INT UNSIGNED
-)
-```
-
-
+Find a way to transfer information about purchase from scheck.html to checkout.html (environment variable, cookies?)
+Add transaction recording/final checkout

@@ -1,0 +1,22 @@
+--- To connect to command line (I need to use TCP on my computer or else it doesn't work)
+--- Products (1, Melon), (2, Apple), (4, Bread)
+mysql -u root -p -h 127.0.0.1
+--- `CREATE DATABASE ASELFCHECK`
+---
+``` 
+CREATE TABLE products (
+product_id INT UNSIGNED PRIMARY KEY,
+product_name VARCHAR(30) NOT NULL, 
+price INT NOT NULL
+)
+```
+---
+```
+CREATE TABLE transactions (
+transaction_id UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+product_id INT UNSIGNED,
+card_number INT UNSIGNED
+)
+```
+
+
