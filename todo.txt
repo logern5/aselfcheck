@@ -1,2 +1,5 @@
-Find a way to transfer information about purchase from scheck.html to checkout.html (environment variable, cookies?)
-Add transaction recording/final checkout
+//Find a way to transfer information about purchase from scheck.html to checkout.html (environment variable, cookies?) (DONE)
+//Add transaction recording/final checkout
+
+Transaction recording and final checkout works now. All that's left is css on the thank you page, main page, and checkout page to match the other pages, maybe matching
+background color and some text centering on the title and checkout pages. Also, removing commented out code and debug lines.

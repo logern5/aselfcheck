@@ -14,7 +14,8 @@ $assoc = $result->fetch_assoc();
 
 /* If item exists, add to internal list of purchased items */
 if(!empty($assoc)){
-	($_SESSION["items"])[] = $item_code;
+	($_SESSION["items"])[] = intval($item_code);
+	$_SESSION["total"] += $assoc["product_price"];
 }
 
 echo json_encode($assoc);

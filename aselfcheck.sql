@@ -33,7 +33,7 @@ ENGINE = InnoDB;
 -- Table `aselfcheck`.`cards_info`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `aselfcheck`.`cards_info` (
-  `card_id` INT NOT NULL,
+  `card_id` INT NOT NULL AUTO_INCREMENT,
   `card_number` VARCHAR(19) NOT NULL,
   PRIMARY KEY (`card_id`))
 ENGINE = InnoDB;

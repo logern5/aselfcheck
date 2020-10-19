@@ -79,7 +79,6 @@ window.onload = function(){
 	finish.onclick = function(){
 		console.log("finish clicked");
 		console.log(cart_items);
-		//TODO: change temporary test
-		window.location = "item_test.php";
+		window.location = "checkout.php";
 	}
 }

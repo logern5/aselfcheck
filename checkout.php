@@ -1,3 +1,8 @@
+<?php
+session_start();
+//echo var_dump($_SESSION["items"]);
+//echo var_dump($_SESSION["total"]);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +14,9 @@
 <body>
   <h1>aselfcheck</h1>
   <div class="w3-container">
-    <form action="/check.php">
-      Card no: <input type="text" name="card" /><br/>
+    Total: $ <?php echo(number_format($_SESSION["total"],2)); ?>
+    <form action="/check.php" method="POST">
+      Card no: <input type="tel" name="card" maxlength="19" /><br/>
       <input type="submit" value="Pay" />
     </form>
   </div>
