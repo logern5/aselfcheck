@@ -1,0 +1,23 @@
+body {
+	background-color: w3-light-gray;
+}
+.cout {
+	height: 250px;
+	width: 250px;
+	text-align: center;
+	line-height: 250px;
+}
+.ccdiv {
+	width: 300px;
+	margin: auto;
+}
+.sbtn {
+	background-color: green;
+	width: 30%;
+	margin: 0 auto;
+	display: block;
+}
+.card-input{
+	width: 100%;
+}
+
